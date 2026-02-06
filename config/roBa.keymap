@@ -75,10 +75,10 @@
 
         NUM {
             bindings = <
-&trans  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &trans                              &kp F1           &kp F2  &kp F3  &kp F4  &kp F5
-&trans  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &trans  &trans      &kp UP_ARROW    &kp F6           &kp F7  &kp F8  &kp F9  &kp F10
-&trans  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &trans  &trans      &kp DOWN_ARROW  &trans           &trans  &trans  &trans  &kp F11
-&trans  &trans           &kp KP_NUMBER_0  &trans           &trans  &trans      &kp LEFT_ARROW  &kp RIGHT_ARROW                          &kp F12
+&trans  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &trans                              &kp F1           &kp AMPERSAND  &kp ASTRK    &kp INT_YEN  &kp F5
+&trans  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &trans  &trans      &kp UP_ARROW    &kp F6           &kp DOLLAR     &kp PERCENT  &kp CARET    &kp F10
+&trans  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &trans  &trans      &kp DOWN_ARROW  &trans           &kp EXCL       &kp AT       &kp HASH     &kp F11
+&trans  &trans           &kp KP_NUMBER_0  &trans           &trans  &trans      &kp LEFT_ARROW  &kp RIGHT_ARROW                                           &kp F12
             >;
         };
 

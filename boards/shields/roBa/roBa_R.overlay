@@ -1,24 +1,44 @@
 #include "roBa.dtsi"
+#include <input/processors.dtsi>    /* ★追加：input-processors を使うため */
 
 &default_transform {
     col-offset = <6>;
 };
 
 &kscan0 {
-        col-gpios
-            = <&xiao_d 10 GPIO_ACTIVE_HIGH>
-            , <&xiao_d 9 GPIO_ACTIVE_HIGH>
-            , <&xiao_d 8 GPIO_ACTIVE_HIGH>
-            , <&xiao_d 7 GPIO_ACTIVE_HIGH>
-            , <&gpio0 10 GPIO_ACTIVE_HIGH>
-            ;
+    col-gpios
+        = <&xiao_d 10 GPIO_ACTIVE_HIGH>
+        , <&xiao_d 9 GPIO_ACTIVE_HIGH>
+        , <&xiao_d 8 GPIO_ACTIVE_HIGH>
+        , <&xiao_d 7 GPIO_ACTIVE_HIGH>
+        , <&gpio0 10 GPIO_ACTIVE_HIGH>
+        ;
 };
 
 / {
-    trackball_listener {
+    trackball_listener: trackball_listener {
         status = "okay";
         compatible = "zmk,input-listener";
         device = <&trackball>;
+
+        /*
+         * 通常時（ポインタ移動）の速度調整を入れたいならここ：
+         * input-processors = < &zip_xy_scaler 1 1 >;
+         */
+
+        /* ★SCROLLレイヤー(=5)の時だけ、XY移動を縦/横スクロールに変換 */
+        scroll_override {
+            layers = <5>;
+            input-processors = <
+                &zip_xy_to_scroll_mapper
+                /*
+                 * スクロール量の調整（任意）
+                 * 速すぎる:  &zip_xy_scaler 1 1
+                 * 遅い:      &zip_xy_scaler 2 2 など
+                 */
+                /* &zip_xy_scaler 1 1 */
+            >;
+        };
     };
 };
 

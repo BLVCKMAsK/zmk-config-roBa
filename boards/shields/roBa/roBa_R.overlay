@@ -32,7 +32,7 @@
             layers = <5>;
             input-processors = <
                 &zip_xy_to_scroll_mapper
-                &zip_scroll_scaler 1 4                    /* ★スクロール量を1/4に */
+                &zip_scroll_scaler 1 10                    /* ★スクロール量を1/10に */
                 &zip_scroll_transform INPUT_TRANSFORM_Y_INVERT  /* ★縦だけ反転 */
             >;
         };

@@ -1,5 +1,6 @@
 #include "roBa.dtsi"
-#include <input/processors.dtsi>    /* ★追加：input-processors を使うため */
+#include <input/processors.dtsi>                 /* input-processors 用 */
+#include <dt-bindings/zmk/input_transform.h>     /* INPUT_TRANSFORM_* 用 */
 
 &default_transform {
     col-offset = <6>;
@@ -22,7 +23,7 @@
         device = <&trackball>;
 
         /*
-         * 通常時（ポインタ移動）の速度調整を入れたいならここ：
+         * 通常時（ポインタ移動）の調整を入れたいならここ：
          * input-processors = < &zip_xy_scaler 1 1 >;
          */
 
@@ -31,12 +32,8 @@
             layers = <5>;
             input-processors = <
                 &zip_xy_to_scroll_mapper
-                /*
-                 * スクロール量の調整（任意）
-                 * 速すぎる:  &zip_xy_scaler 1 1
-                 * 遅い:      &zip_xy_scaler 2 2 など
-                 */
-                /* &zip_xy_scaler 1 1 */
+                &zip_scroll_scaler 1 4                    /* ★スクロール量を1/4に */
+                &zip_scroll_transform INPUT_TRANSFORM_Y_INVERT  /* ★縦だけ反転 */
             >;
         };
     };

@@ -15,6 +15,10 @@
 
 &sl { release-after-ms = <250>; };
 
+&sensors {
+    triggers-per-rotation = <6>;
+};
+
 / {
     combos {
         compatible = "zmk,combos";
@@ -103,7 +107,7 @@
 &kp LCTRL           &kp LEFT_ALT    &kp LEFT_COMMAND    &lt 6 DELETE      &lt 5 CLCK  &lt 3 BACKSPACE      &lt 2 ENTER  &lt 1 SPACE                                                           &lt 6 LOCKING_CAPS
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
         };
 
         NUM {
@@ -114,7 +118,7 @@
 &none              &none         &none         &trans        &trans                &trans         &trans     &trans                                                           &none
             >;
 
-            sensor-bindings = <&inc_dec_kp C_BRI_INC C_BRI_DEC>;
+            sensor-bindings = <&inc_dec_kp C_BRI_DN C_BRI_UP>;
         };
 
         ARROW {

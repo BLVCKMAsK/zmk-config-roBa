@@ -139,10 +139,10 @@
 
         MOUSE {
             bindings = <
-&to_layer_0 Q  &to_layer_0 W  &to_layer_0 E  &to_layer_0 R      &to_layer_0 T                             &to_layer_0 Y  &to_layer_0 U  &kp I      &to_layer_0 O  &kp P
-&to_layer_0 A  &kp LG(S)      &kp LG(D)      &mkp_exit_AML MB1  &mkp_exit_AML MB2  &trans      &kp TAB    &kp H          &kp J          &kp K      &kp L          &kp LC(SEMICOLON)
-&kp LG(Z)      &kp LC(X)      &kp LG(C)      &kp LG(V)          &to_layer_0 B      &trans      &kp MINUS  &to_layer_0 N  &kp M          &kp COMMA  &kp PERIOD     &kp SLASH
-&trans         &trans         &trans         &trans             &trans             &trans      &trans     &trans                                                  &trans
+&none      &none      &none      &none              &none                                     &to_layer_0 Y  &to_layer_0 U  &kp I      &to_layer_0 O  &kp P
+&none      &kp LG(S)  &kp LG(D)  &mkp_exit_AML MB1  &mkp_exit_AML MB2  &trans      &kp TAB    &kp H          &kp J          &kp K      &kp L          &kp LC(SEMICOLON)
+&kp LG(Z)  &kp LC(X)  &kp LG(C)  &kp LG(V)          &none              &trans      &kp MINUS  &to_layer_0 N  &kp M          &kp COMMA  &kp PERIOD     &kp SLASH
+&trans     &trans     &trans     &trans             &trans             &trans      &trans     &trans                                                  &trans
             >;
         };
 

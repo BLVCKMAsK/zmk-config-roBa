@@ -105,7 +105,7 @@
 &kp LCTRL  &kp LEFT_ALT  &kp LEFT_COMMAND  &lt 3 DELETE  &lt 5 CLCK  &lt 2 BACKSPACE      &lt 1 ENTER  &mt RIGHT_SHIFT SPACE                             &lt 6 LOCKING_CAPS
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+            sensor-bindings = <&inc_dec_kp C_VOLUME_DOWN C_VOLUME_UP>;
         };
 
         NUM {
@@ -116,7 +116,7 @@
 &none              &none         &none         &trans        &trans                &trans         &trans     &trans                                                           &none
             >;
 
-            sensor-bindings = <&inc_dec_kp C_BRI_DN C_BRI_UP>;
+            sensor-bindings = <&inc_dec_kp C_BRIGHTNESS_DEC C_BRIGHTNESS_INC>;
         };
 
         ARROW {
